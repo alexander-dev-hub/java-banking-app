@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<File name="File" fileName="logging.log">
+			<PatternLayout>
+				<Pattern>
+					[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+				</Pattern>
+			</PatternLayout>
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.revature.project0.classes.TransactionLogger" level = "info" additivity= "true">
+			<AppenderRef ref = "File"/>
+		</Logger>
+		<Root>
+			<AppenderRef ref = "File"/>
+		</Root>
+	</Loggers>
+</Configuration>
